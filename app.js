@@ -7,8 +7,7 @@ const Photo = require('./models/Photo.js');
 
 const app = express();
 
- mongoose.connect('mongodb://localhost/pcat-test-db');
-
+mongoose.connect('mongodb://localhost/pcat-test-db');
 
 // Template Engine
 app.set('view engine', 'ejs');
@@ -26,6 +25,16 @@ app.get('/', async (req, res) => {
     photos,
   });
 });
+
+app.get('/photos/:id', async (req, res) => {
+  // console.log(req.params.id);
+  //  res.render('about');
+  const photo = await Photo.findById(req.params.id);
+  res.render('photo', {
+    photo
+  })
+});
+
 app.get('/about', (req, res) => {
   res.render('about');
 });
