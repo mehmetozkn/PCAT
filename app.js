@@ -11,10 +11,10 @@ const app = express();
 
 mongoose.connect('mongodb+srv://mehmet:pxC8eiqAFia1ppsR@atlascluster.c8jq65u.mongodb.net/pcat-db?retryWrites=true&w=majority');
 
-// Template Engine
+// Template Engine.
 app.set('view engine', 'ejs');
 
-// Middlewares
+// Middlewares.
 app.use(express.static('public'));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -25,7 +25,7 @@ app.use(
   })
 );
 
-// ROUTES
+// Routes.
 app.get('/', photoController.getAllPhotos);
 app.get('/photos/:id', photoController.getPhoto);
 app.post('/photos', photoController.createPhoto);

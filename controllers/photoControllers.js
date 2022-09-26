@@ -42,7 +42,9 @@ exports.createPhoto = (req, res) => {
     });
     res.redirect('/');
   });
-};
+};  
+
+
 
 exports.updatePhoto = async (req, res) => {
   const photo = await Photo.findOne({ _id: req.params.id });
