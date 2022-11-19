@@ -1,2 +1,2 @@
 # PCAT
-Photo upload, delete, edit website project. Used MVC Patter, Heroku and MondoDB. 
+Photo upload, delete, edit website project. Used MVC Pattern, Heroku and MondoDB. 
