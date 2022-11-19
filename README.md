@@ -1,2 +1,2 @@
 # PCAT
-Patika.dev Node.js tutorial. Photo upload, delete, edit website project. Used Heroku and MondoDB.
+Photo upload, delete, edit website project. Used MVC Patter, Heroku and MondoDB. 
